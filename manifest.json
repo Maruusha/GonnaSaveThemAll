@@ -1,7 +1,7 @@
 {
   "name": "GonnaSaveThemAll",
   "description": "Base Level Extension",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "manifest_version": 3,
   "action": {
     "default_popup": "popup/store_url.html",
@@ -18,11 +18,8 @@
   ],
   "content_scripts": [
     {
-      "js": ["scripts/getUrlList.js"],
-      "matches": [
-        "https://developer.chrome.com/docs/extensions/*",
-        "https://developer.chrome.com/docs/webstore/*"
-      ]
+      "matches": ["<all_url>"],
+      "js": ["scripts/Content.js"]
     }
   ]
 }
