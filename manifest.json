@@ -1,11 +1,15 @@
 {
   "name": "GonnaSaveThemAll",
   "description": "Base Level Extension",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "manifest_version": 3,
+  "default_locale": "en",
   "action": {
-    "default_popup": "popup/store_url.html",
+    "default_popup": "default_popup.html",
     "default_icon": "images/icon/icon-128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
   },
   "icons": {
     "16": "images/icon/icon-16.png",
@@ -14,12 +18,7 @@
     "128": "images/icon/icon-128.png"
   },
   "permissions": [
-    "tabs"
-  ],
-  "content_scripts": [
-    {
-      "matches": ["<all_url>"],
-      "js": ["scripts/Content.js"]
-    }
+    "bookmarks",
+    "downloads"
   ]
 }
